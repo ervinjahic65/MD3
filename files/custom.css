@@ -1,0 +1,63 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+/* Hero Section */
+.hero-section {
+    background-color: #0b1e2d;
+   /* Adjust to match your desired navy color */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+/* Icons or feature images */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+/* "Cómo Funciona" Section */
+.how-it-works-section {
+    padding: 60px 0;
+}
+.how-it-works-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+/* "Qué hace a {
+   Company
+}
+Diferente" Section */
+.diferente-section {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+.diferente-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+/* FAQ Section */
+.faq-section {
+    padding: 60px 0;
+}
+.faq-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+/* Footer (Optional) */
+footer {
+    background-color: #0b1e2d;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
