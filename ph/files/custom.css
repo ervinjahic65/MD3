@@ -1,0 +1,101 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+/* Hero Section */
+.hero-section {
+   /* Adjust to match your desired navy color */
+   background: url('./hero.jpg');
+    color: #fff;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    min-height: 400px;
+    padding: 80px 0;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+/* Icons or feature images */
+.feature-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+.feature-icon-d {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+.container-custom {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    padding: 5%;
+}
+/* "Cómo Funciona" Section */
+.how-it-works-section {
+    padding: 60px 0;
+}
+.how-it-works-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+/* "Qué hace a {
+   Company
+}
+Diferente" Section */
+.diferente-section {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+.diferente-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+/* FAQ Section */
+.faq-section {
+    padding: 60px 0;
+}
+.faq-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+a.nav-link {
+    color: #FFF;
+}
+a.nav-link:hover {
+    color: #5f5f5f;
+}
+.img-fluid {
+    max-height: 700px !important;
+}
+.community-items {
+    padding: 2%;
+    border: 1px solid #fff;
+}
+.community-items:nth-of-type(1), .community-items:nth-of-type(3) {
+    box-shadow: 0px 0.46rem 2.18rem;
+} 
+.community-items h4, .community-items p {
+    color: #FFF !important;
+}
+/* Footer (Optional) */
+footer {
+    background-color: #010048;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
