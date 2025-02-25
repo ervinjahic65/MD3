@@ -53,7 +53,7 @@
         <br>
         <h1>Join {Company} in Delivering Compassionate Healthcare</h1>
         <p>Be a part of our mission to support hospitals and care for people with dedication and excellence.</p>
-        <button class="btn btn-primary btn-lg">Apply Now</button>
+        <button class="btn btn-primary btn-to-form btn-lg">Apply Now</button>
       </div>
     </section>
     
@@ -620,6 +620,12 @@
               </p>
             `;
           }, 2000);
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const applyButton = document.querySelector(".btn-to-form");
+            applyButton.addEventListener("click", function() {
+                document.getElementById("form").scrollIntoView({ behavior: "smooth" });
+            });
         });
     </script>
       
