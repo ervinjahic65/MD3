@@ -306,8 +306,31 @@
         </div>
         </div>
     </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5">
+        <div class="container">
+        <h2 class="text-center mb-5">Get in Touch</h2>
+        <form id="form">
+            <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your email">
+            </div>
+            <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+            </div>
+            <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        </div>
+    </section>
   
-    
     <!-- Footer (Optional) -->
     <footer class="bg-dark text-white py-5">
         <div class="container px-3">
@@ -320,7 +343,7 @@
                 Phone - 0674 2702416
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <img src="#" alt="Logo">
             </div>
           </div>
@@ -333,6 +356,28 @@
     
     <!-- Bootstrap 5 JS -->
     <script src="files/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+          e.preventDefault();
+      
+          // Replace form content with a centered loading GIF
+          document.getElementById("form").innerHTML = `
+            <div style="text-align: center;">
+              <img src="files/loading.gif" width="80" alt="Loading...">
+            </div>
+          `;
+      
+          // After 2 seconds, replace content with a thank-you message (centered)
+          setTimeout(() => {
+            document.getElementById("form").innerHTML = `
+              <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
+                Thank you for registering. A representative will contact you shortly.
+              </p>
+            `;
+          }, 2000);
+        });
+    </script>
+      
 </body>
     
 </html>
