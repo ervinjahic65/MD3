@@ -82,7 +82,16 @@ a.nav-link:hover {
 .img-fluid {
     max-height: 700px !important;
 }
-
+.community-items {
+    padding: 2%;
+    border: 1px solid #fff;
+}
+.community-items:nth-of-type(1), .community-items:nth-of-type(3) {
+    box-shadow: 0px 0.46rem 2.18rem;
+} 
+.community-items h4, .community-items p {
+    color: #FFF !important;
+}
 /* Footer (Optional) */
 footer {
     background-color: #010048;
