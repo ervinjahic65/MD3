@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Corthen Health - Hubungi Kami</title>
+  <link href="files/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="files/custom.css">
+  <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Pastikan html dan body mengambil tinggi penuh */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Gunakan flexbox pada body untuk layout footer yang menempel */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Konten utama mengisi ruang yang tersisa */
+    main {
+        flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigasi Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b1e2d;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="files/logo.png" alt="Logo" style="width: 220px; height: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Kebijakan Privasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="terms.html">Syarat dan Ketentuan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Bagian Utama: Formulir Kontak -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Hubungi Kami</h1>
+      <p class="text-center mb-5">
+        Ada pertanyaan atau membutuhkan informasi lebih lanjut? Silakan isi formulir di bawah ini, dan salah satu perwakilan kami akan segera menghubungi Anda.
+      </p>
+      <form id="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email Anda" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subjek</label>
+          <input type="text" class="form-control" id="subject" placeholder="Subjek" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Kirim</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Bagian Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container px-3">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <h3 class="h5 fw-bold mb-3">Hubungi Kami</h3>
+          <p class="text-white mb-0">
+            Nomor Perusahaan: 00943935 <br>
+            Alamat: Lime St, London EC3M 7HR, UK <br>
+            Nomor Telepon: 01632 960189
+          </p>
+        </div>
+        <div class="col-md-8 text-end">
+          <ul class="list-inline mt-3">
+            <li class="list-inline-item"><a href="about.html" class="text-white">Tentang Kami</a></li>
+            <li class="list-inline-item"><a href="privacy.html" class="text-white">Kebijakan Privasi</a></li>
+            <li class="list-inline-item"><a href="terms.html" class="text-white">Syarat &amp; Ketentuan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center">
+        <p class="text-white mb-0">&copy; 2025 Corthen Health, Semua hak dilindungi undang-undang.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap 5 JS -->
+  <script src="files/bootstrap.bundle.min.js"></script>
+  <!-- JS untuk Pengiriman Formulir Kontak -->
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      // Ganti konten formulir dengan GIF loading yang terpusat
+      document.getElementById("form").innerHTML = `
+        <div style="text-align: center;">
+          <img src="files/loading.gif" width="80" alt="Loading...">
+        </div>
+      `;
+      
+      // Setelah 2 detik, ganti konten dengan pesan terima kasih (terpusat)
+      setTimeout(() => {
+        document.getElementById("form").innerHTML = `
+          <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
+            Terima kasih telah menghubungi kami. Seorang perwakilan akan segera menghubungi Anda.
+          </p>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
