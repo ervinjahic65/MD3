@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Corthen Health - Contato</title>
+  <link href="files/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="files/custom.css">
+  <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Garantir que html e body tenham altura total */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Usar flexbox no body para um layout com rodapé fixo */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* O conteúdo principal cresce para preencher o espaço restante */
+    main {
+        flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navegação do Cabeçalho -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b1e2d;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="files/logo.png" alt="Logo" style="width: 220px; height: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Política de Privacidade</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="terms.html">Termos e Condições</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Sobre Nós</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Seção Principal: Formulário de Contato -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Entre em Contato</h1>
+      <p class="text-center mb-5">
+        Tem alguma dúvida ou precisa de mais informações? Preencha o formulário abaixo, e um de nossos representantes entrará em contato com você em breve.
+      </p>
+      <form id="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="Seu e-mail" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Assunto</label>
+          <input type="text" class="form-control" id="subject" placeholder="Assunto" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Seção do Rodapé -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container px-3">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <h3 class="h5 fw-bold mb-3">Contato</h3>
+          <p class="text-white mb-0">
+            CNPJ: 78.989.613/0001-90 <br>
+            Inscrição Estadual: 8324829-77 <br>
+            Endereço: 974 Rua Itaguaí, Mangabeira, Feira de Santana, 44056-516 <br>
+            Número de telefone: (75) 2871-8215
+          </p>
+        </div>
+        <div class="col-md-8 text-end">
+          <ul class="list-inline mt-3">
+            <li class="list-inline-item"><a href="about.html" class="text-white">Sobre Nós</a></li>
+            <li class="list-inline-item"><a href="privacy.html" class="text-white">Política de Privacidade</a></li>
+            <li class="list-inline-item"><a href="terms.html" class="text-white">Termos e Condições</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center">
+        <p class="text-white mb-0">&copy; 2025 Corthen Health. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap 5 JS -->
+  <script src="files/bootstrap.bundle.min.js"></script>
+  <!-- JS para Envio do Formulário de Contato -->
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      // Substituir o conteúdo do formulário por um GIF de carregamento centralizado
+      document.getElementById("form").innerHTML = `
+        <div style="text-align: center;">
+          <img src="files/loading.gif" width="80" alt="Carregando...">
+        </div>
+      `;
+      
+      // Após 2 segundos, substituir o conteúdo por uma mensagem de agradecimento (centralizada)
+      setTimeout(() => {
+        document.getElementById("form").innerHTML = `
+          <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
+            Obrigado por entrar em contato. Um representante falará com você em breve.
+          </p>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
