@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Corthen Health - Liên Hệ</title>
+  <title>Corthen Health - 문의하기</title>
   <link href="files/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="files/custom.css">
   <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
   <style>
-    /* Đảm bảo html và body chiếm toàn bộ chiều cao */
+    /* Ensure html and body take full height */
     html, body {
         height: 100%;
         margin: 0;
         padding: 0;
     }
-    /* Sử dụng flexbox cho body để có layout chân trang cố định */
+
+    /* Use flexbox on the body for a sticky footer layout */
     body {
         display: flex;
         flex-direction: column;
     }
-    /* Nội dung chính sẽ mở rộng để lấp đầy không gian còn lại */
+
+    /* Main content grows to fill the remaining space */
     main {
         flex: 1;
     }
+
   </style>
 </head>
 <body>
-  <!-- Thanh Điều Hướng -->
+  <!-- Header Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b1e2d;">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -39,98 +42,98 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Trang Chủ</a>
+            <a class="nav-link" href="index.html">홈</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="privacy.html">Chính Sách Riêng Tư</a>
+            <a class="nav-link" href="privacy.html">개인정보처리방침</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="terms.html">Điều Khoản &amp; Điều Kiện</a>
+            <a class="nav-link" href="terms.html">이용약관</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">Về Chúng Tôi</a>
+            <a class="nav-link active" href="about.html">회사 소개</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
-  <!-- Nội dung Chính: Form Liên Hệ -->
+  <!-- Main Section: Contact Form -->
   <main class="py-5">
     <div class="container">
-      <h1 class="mb-4 text-center">Liên Hệ</h1>
+      <h1 class="mb-4 text-center">문의하기</h1>
       <p class="text-center mb-5">
-        Bạn có thắc mắc hoặc cần thêm thông tin? Vui lòng điền vào mẫu dưới đây, và đại diện của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+        질문이 있으시거나 추가 정보가 필요하시면 아래 양식을 작성해 주세요. 담당자가 곧 연락드릴 것입니다.
       </p>
       <form id="form">
         <div class="mb-3">
-          <label for="name" class="form-label">Họ và Tên</label>
-          <input type="text" class="form-control" id="name" placeholder="Tên của bạn" required>
+          <label for="name" class="form-label">이름</label>
+          <input type="text" class="form-control" id="name" placeholder="이름" required>
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Email của bạn" required>
+          <label for="email" class="form-label">이메일</label>
+          <input type="email" class="form-control" id="email" placeholder="이메일" required>
         </div>
         <div class="mb-3">
-          <label for="subject" class="form-label">Chủ Đề</label>
-          <input type="text" class="form-control" id="subject" placeholder="Chủ đề" required>
+          <label for="subject" class="form-label">제목</label>
+          <input type="text" class="form-control" id="subject" placeholder="제목" required>
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label">Lời Nhắn</label>
-          <textarea class="form-control" id="message" rows="5" placeholder="Lời nhắn của bạn" required></textarea>
+          <label for="message" class="form-label">메시지</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="메시지" required></textarea>
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary">Gửi</button>
+          <button type="submit" class="btn btn-primary">제출하기</button>
         </div>
       </form>
     </div>
   </main>
   
-  <!-- Chân Trang -->
+  <!-- Footer Section -->
   <footer class="bg-dark text-white py-5">
     <div class="container px-3">
       <div class="row mb-4">
         <div class="col-md-4">
-          <h3 class="h5 fw-bold mb-3">Liên Hệ</h3>
+          <h3 class="h5 fw-bold mb-3">문의처</h3>
           <p class="text-white mb-0">
-            BRN: CR545721 <br>
-            Địa chỉ: 13 Tsut Kou Ngan South Street Tsik Sit Hồng Kông <br>
-            Điện thoại: 30990879
+            주소: 서울특별시 중구 서소문동 21-1 <br>
+            전화: +34 986 227 374 <br>
+            법인 등록 번호: 4010501096087
           </p>
         </div>
         <div class="col-md-8 text-end">
           <ul class="list-inline mt-3">
-            <li class="list-inline-item"><a href="about.html" class="text-white">Về Chúng Tôi</a></li>
-            <li class="list-inline-item"><a href="privacy.html" class="text-white">Chính Sách Riêng Tư</a></li>
-            <li class="list-inline-item"><a href="terms.html" class="text-white">Điều Khoản &amp; Điều Kiện</a></li>
+            <li class="list-inline-item"><a href="about.html" class="text-white">회사 소개</a></li>
+            <li class="list-inline-item"><a href="privacy.html" class="text-white">개인정보처리방침</a></li>
+            <li class="list-inline-item"><a href="terms.html" class="text-white">이용약관</a></li>
           </ul>
         </div>
       </div>
       <div class="border-top border-secondary pt-3 text-center">
-        <p class="text-white mb-0">&copy; 2025 Corthen Health, Mọi quyền được bảo lưu.</p>
+        <p class="text-white mb-0">&copy; 2025 Corthen Health, 모든 권리 보유.</p>
       </div>
     </div>
   </footer>
   
   <!-- Bootstrap 5 JS -->
   <script src="files/bootstrap.bundle.min.js"></script>
-  <!-- JS xử lý gửi Form Liên Hệ -->
+  <!-- JS for Contact Form Submission -->
   <script>
     document.getElementById("form").addEventListener("submit", function (e) {
       e.preventDefault();
       
-      // Thay thế nội dung form bằng ảnh GIF tải về được căn giữa
+      // Replace form content with a centered loading GIF
       document.getElementById("form").innerHTML = `
         <div style="text-align: center;">
-          <img src="files/loading.gif" width="80" alt="Đang tải...">
+          <img src="files/loading.gif" width="80" alt="Loading...">
         </div>
       `;
       
-      // Sau 2 giây, thay thế nội dung bằng thông báo cảm ơn (căn giữa)
+      // After 2 seconds, replace content with a thank-you message (centered)
       setTimeout(() => {
         document.getElementById("form").innerHTML = `
           <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
-            Cảm ơn bạn đã liên hệ. Đại diện của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+            문의해 주셔서 감사합니다. 담당자가 곧 연락드릴 것입니다.
           </p>
         `;
       }, 2000);
