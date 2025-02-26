@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Corthen Health - Contacteer ons</title>
+  <link href="files/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="files/custom.css">
+  <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Zorg dat html en body de volledige hoogte innemen */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Gebruik flexbox op de body voor een sticky footer layout */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hoofdinhoud vult de resterende ruimte */
+    main {
+        flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navigatie -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b1e2d;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="files/logo.png" alt="Logo" style="width: 220px; height: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigatie wisselen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Privacybeleid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="terms.html">Algemene voorwaarden</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Over ons</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hoofdsectie: Contactformulier -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Neem contact op</h1>
+      <p class="text-center mb-5">
+        Heeft u vragen of heeft u meer informatie nodig? Vul dan het onderstaande formulier in en een van onze vertegenwoordigers neemt spoedig contact met u op.
+      </p>
+      <form id="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Naam</label>
+          <input type="text" class="form-control" id="name" placeholder="Uw naam" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="Uw e-mail" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Onderwerp</label>
+          <input type="text" class="form-control" id="subject" placeholder="Onderwerp" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Bericht</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Uw bericht" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Verzenden</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Footer Sectie -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container px-3">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <h3 class="h5 fw-bold mb-3">Contact</h3>
+          <p class="text-white mb-0">
+            Bedrijfsnummer 00943935 <br>
+            Adres: Lime St, London EC3M 7HR, VK <br>
+            Telefoonnummer: 01632 960189
+          </p>
+        </div>
+        <div class="col-md-8 text-end">
+          <ul class="list-inline mt-3">
+            <li class="list-inline-item"><a href="about.html" class="text-white">Over ons</a></li>
+            <li class="list-inline-item"><a href="privacy.html" class="text-white">Privacybeleid</a></li>
+            <li class="list-inline-item"><a href="terms.html" class="text-white">Algemene voorwaarden</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center">
+        <p class="text-white mb-0">&copy; 2025 Corthen Health, Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap 5 JS -->
+  <script src="files/bootstrap.bundle.min.js"></script>
+  <!-- JS voor Contactformulierverwerking -->
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      // Vervang formulierinhoud met een gecentreerde laadgif
+      document.getElementById("form").innerHTML = `
+        <div style="text-align: center;">
+          <img src="files/loading.gif" width="80" alt="Laden...">
+        </div>
+      `;
+      
+      // Na 2 seconden, vervang inhoud met een bedankbericht (gecentreerd)
+      setTimeout(() => {
+        document.getElementById("form").innerHTML = `
+          <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
+            Bedankt voor uw bericht. Een vertegenwoordiger neemt spoedig contact met u op.
+          </p>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
