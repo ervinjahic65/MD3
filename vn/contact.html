@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Corthen Health - Liên Hệ</title>
+  <link href="files/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="files/custom.css">
+  <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Đảm bảo html và body chiếm toàn bộ chiều cao */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /* Sử dụng flexbox cho body để có layout chân trang cố định */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Nội dung chính sẽ mở rộng để lấp đầy không gian còn lại */
+    main {
+        flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Thanh Điều Hướng -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0b1e2d;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="files/logo.png" alt="Logo" style="width: 220px; height: auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Chính Sách Riêng Tư</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="terms.html">Điều Khoản &amp; Điều Kiện</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Về Chúng Tôi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Nội dung Chính: Form Liên Hệ -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Liên Hệ</h1>
+      <p class="text-center mb-5">
+        Bạn có thắc mắc hoặc cần thêm thông tin? Vui lòng điền vào mẫu dưới đây, và đại diện của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+      </p>
+      <form id="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Họ và Tên</label>
+          <input type="text" class="form-control" id="name" placeholder="Tên của bạn" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email của bạn" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Chủ Đề</label>
+          <input type="text" class="form-control" id="subject" placeholder="Chủ đề" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Lời Nhắn</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Lời nhắn của bạn" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Gửi</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Chân Trang -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container px-3">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <h3 class="h5 fw-bold mb-3">Liên Hệ</h3>
+          <p class="text-white mb-0">
+            BRN: CR545721 <br>
+            Địa chỉ: 13 Tsut Kou Ngan South Street Tsik Sit Hồng Kông <br>
+            Điện thoại: 30990879
+          </p>
+        </div>
+        <div class="col-md-8 text-end">
+          <ul class="list-inline mt-3">
+            <li class="list-inline-item"><a href="about.html" class="text-white">Về Chúng Tôi</a></li>
+            <li class="list-inline-item"><a href="privacy.html" class="text-white">Chính Sách Riêng Tư</a></li>
+            <li class="list-inline-item"><a href="terms.html" class="text-white">Điều Khoản &amp; Điều Kiện</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center">
+        <p class="text-white mb-0">&copy; 2025 Corthen Health, All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap 5 JS -->
+  <script src="files/bootstrap.bundle.min.js"></script>
+  <!-- JS xử lý gửi Form Liên Hệ -->
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      // Thay thế nội dung form bằng ảnh GIF tải về được căn giữa
+      document.getElementById("form").innerHTML = `
+        <div style="text-align: center;">
+          <img src="files/loading.gif" width="80" alt="Đang tải...">
+        </div>
+      `;
+      
+      // Sau 2 giây, thay thế nội dung bằng thông báo cảm ơn (căn giữa)
+      setTimeout(() => {
+        document.getElementById("form").innerHTML = `
+          <p style="font-size: 18px; color: black; font-weight: 700; text-align: center;">
+            Cảm ơn bạn đã liên hệ. Đại diện của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+          </p>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
